@@ -59,6 +59,9 @@ stages:
 
     - publish: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
       artifact: drop
+    - task: CmdLine@2
+      inputs:
+        script: 'dir'
 
 - stage: Deploy
   displayName: Deploy stage
