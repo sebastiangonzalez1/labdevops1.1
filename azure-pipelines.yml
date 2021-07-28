@@ -11,7 +11,7 @@ variables:
   azureSubscription: 'b4e022f2-8257-4de3-8f4b-959ca8d9eb47'
 
   # Function app name
-  functionAppName: 'jesumepyfuncmp'
+  functionAppName: 'jesumeprmpyfunc'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
