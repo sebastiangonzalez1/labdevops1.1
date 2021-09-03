@@ -11,7 +11,7 @@ variables:
   azureSubscription: 'b4e022f2-8257-4de3-8f4b-959ca8d9eb47'
 
   # Function app name
-  functionAppName: 'jesume-pyfuncElastic'
+  functionAppName: 'PyFnTestrandam'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
@@ -39,9 +39,9 @@ stages:
       displayName: 'Build extensions'
 
     - task: UsePythonVersion@0
-      displayName: 'Use Python 3.8'
+      displayName: 'Use Python 3.9'
       inputs:
-        versionSpec: 3.8 # Functions V2 supports Python 3.8 as of today
+        versionSpec: 3.9 # Functions V2 supports Python 3.9 as of today
 
     - bash: |
         pip install --target="./.python_packages/lib/site-packages" -r ./requirements.txt
