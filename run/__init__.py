@@ -12,7 +12,7 @@ def exec(value):
 
 def main(req: func.HttpRequest) -> func.HttpResponse:
     logging.info('Python HTTP trigger function processed a request.')
-    value = 'Hello team!'
+    value = 'Hello Randall'
     name = req.params.get('name')
     exec(value)
     if not name:
