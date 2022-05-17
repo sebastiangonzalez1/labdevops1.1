@@ -25,7 +25,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
             name = req_body.get('name')
 
     if name:
-        return func.HttpResponse(f"Hello guys, {name}. This HTTP triggered function executed successfully.")
+        return func.HttpResponse(f"Hello team, {name}. This HTTP triggered function executed successfully.")
         exec(value)
     else:
         return func.HttpResponse(
