@@ -1,14 +1,5 @@
 import logging
-import azure.functions as func
-import memory_profiler
 
-root_logger = logging.getLogger()
-root_logger.handlers[0].setFormatter(logging.Formatter("%(name)s: %(message)s"))
-profiler_logstream = memory_profiler.LogFile('memory_profiler_logs', True)
-
-@memory_profiler.profile(stream=profiler_logstream)
-def exec(value):
-    logging.info(value)
 
 def main(req: func.HttpRequest) -> func.HttpResponse:
     logging.info('Python HTTP trigger function processed a request.')
