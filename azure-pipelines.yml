@@ -8,10 +8,10 @@ trigger:
 
 variables:
   # Azure Resource Manager connection created during pipeline creation
-  azureSubscription: 'e9632cea-bc6a-46aa-be8f-e5229d87503b'
+  azureSubscription: 'bddf3c59-769c-49a7-a515-6310ce264e6a'
 
   # Function app name
-  functionAppName: 'jesumePyFunc-refresher'
+  functionAppName: 'PythonFunctionJocsan'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
@@ -42,7 +42,7 @@ stages:
 
       displayName: 'Use Python 3.9'
       inputs:
-        versionSpec: 3.8 # Functions V2 supports Python 3.6 as of today
+        versionSpec: 3.9 # Functions V2 supports Python 3.6 as of today
 
     - bash: |
         pip install --target="./.python_packages/lib/site-packages" -r ./requirements.txt
