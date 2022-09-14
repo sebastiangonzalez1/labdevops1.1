@@ -63,9 +63,9 @@ stages:
     - task: FtpUpload@2
     inputs:
       credentialsOption: 'inputs'
-      serverUrl: 'ftps://waws-prod-dm1-227.ftp.azurewebsites.windows.net/site/wwwroot'
-      username: 'AppServiceLinuxJocsan\$AppServiceLinuxJocsan'
-      password: 'wigMtXxWgG5TNYQb5jlpurvisWfWoLntwg6vw5x1B9g3frlr7CNdnCoLJRCn'
+      serverUrl: 'ftps://waws-prod-dm1-191.ftp.azurewebsites.windows.net/site/wwwroot'
+      username: 'PythonFunctionJocsan\$PythonFunctionJocsan'
+      password: 'jQqZ5MAvsj2gl0htNbm6va5WZ3HNlx0G1c652M8r2iRhbx6SsCE0k44miZAA'
       rootDirectory: '/'
       filePatterns: '**'
       remoteDirectory: '/upload/$(Build.BuildId)/'
