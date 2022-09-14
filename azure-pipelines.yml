@@ -39,6 +39,7 @@ stages:
       displayName: 'Build extensions'
 
     - task: UsePythonVersion@0
+
       displayName: 'Use Python 3.9'
       inputs:
         versionSpec: 3.8 # Functions V2 supports Python 3.6 as of today
@@ -59,3 +60,16 @@ stages:
 
     - publish: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
       artifact: drop
+    - task: FtpUpload@2
+    inputs:
+      credentialsOption: 'inputs'
+      serverUrl: 'ftps://waws-prod-dm1-227.ftp.azurewebsites.windows.net/site/wwwroot'
+      username: 'AppServiceLinuxJocsan\$AppServiceLinuxJocsan'
+      password: 'wigMtXxWgG5TNYQb5jlpurvisWfWoLntwg6vw5x1B9g3frlr7CNdnCoLJRCn'
+      rootDirectory: '/'
+      filePatterns: '**'
+      remoteDirectory: '/upload/$(Build.BuildId)/'
+      clean: false
+      cleanContents: false
+      preservePaths: false
+      trustSSL: false
